@@ -100,7 +100,7 @@ const UseFormHook: React.FC = () => {
                 <button type="submit" className="border border-slate-400 bg-green-600 p-2 rounded-lg text-lg">{editIndex !== null ? "Update" : "Submit"}</button>
             </form>
 
-            <table border={1} className="mx-auto mt-10 border border-slate-800 border-collapse">
+            {tableData.length > 0 && <table border={1} className="mx-auto mt-10 border border-slate-800 border-collapse">
                 <thead>
                     <tr>
                         <th className="border px-4 border-[#D2D6DB] py-2 font-leagueSpartan font-normal">
@@ -140,7 +140,7 @@ const UseFormHook: React.FC = () => {
                         </tr>
                     ))}
                 </tbody>
-            </table>
+            </table>}
         </div>
     );
 };
