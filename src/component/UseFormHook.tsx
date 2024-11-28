@@ -43,6 +43,11 @@ const UseFormHook: React.FC = () => {
         setEditIndex(index);
     };
 
+    const handleDelete = (index: number) => {
+        const filteredData = tableData.filter((_, i) => i !== index);
+        setTableData(filteredData);
+    };
+
     return (
         <div className="flex items-center justify-center min-h-screen flex-col">
             <form
@@ -115,21 +120,21 @@ const UseFormHook: React.FC = () => {
                 <tbody>
                     {tableData.map((row, index) => (
                         <tr key={index}>
-                            <td className="text-lg border border-[#D2D6DB] font-semibold py-2 font-leagueSpartan">
+                            <td className="text-lg border border-[#D2D6DB] font-semibold py-2 px-4 font-leagueSpartan">
                                 {row.firstName}
                             </td>
-                            <td className="text-lg border border-[#D2D6DB] font-semibold py-2 font-leagueSpartan">
+                            <td className="text-lg border border-[#D2D6DB] font-semibold py-2 px-4 font-leagueSpartan">
                                 {row.lastName}
                             </td>
-                            <td className="text-lg border border-[#D2D6DB] font-semibold py-2 font-leagueSpartan">
+                            <td className="text-lg border border-[#D2D6DB] font-semibold py-2 px-4 font-leagueSpartan">
                                 {row.password}
                             </td>
-                            <td className="text-lg border border-[#D2D6DB] font-semibold py-2 font-leagueSpartan">
+                            <td className="text-lg border border-[#D2D6DB] font-semibold py-2 px-4 font-leagueSpartan">
                                 <button className="py-1 px-2 bg-green-300 rounded-lg mr-1 font-leagueSpartan" onClick={() => handleEdit(index)}>
                                     Edit
                                 </button>
-                                <button className="py-1 px-2 bg-green-300 rounded-lg font-leagueSpartan">
-                                    Done
+                                <button className="py-1 px-2 bg-green-300 rounded-lg font-leagueSpartan" onClick={() => handleDelete(index)}>
+                                    Delete
                                 </button>
                             </td>
                         </tr>

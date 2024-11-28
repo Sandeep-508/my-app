@@ -20,8 +20,8 @@ const Input: React.FC<InputProps> = ({
     validationRules,
 }) => (
     <div className="flex items-center justify-between gap-2 max-w-[500px] w-full">
-        <label className="sm:text-xl text-sm font-medium font-leagueSpartan">{label}</label>
-        <div className="flex items-start flex-col w-full">
+        <label className="sm:text-xl text-sm font-medium font-leagueSpartan text-nowrap">{label}</label>
+        <div className="flex items-start justify-between flex-col w-full">
             <input
                 className="p-3 border border-[#D2D6DB] rounded-md w-full font-leagueSpartan font-normal"
                 type={type}
