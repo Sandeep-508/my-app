@@ -49,7 +49,7 @@ const UseFormHook: React.FC = () => {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen flex-col">
+        <div className="flex items-center justify-center min-h-screen flex-col py-10">
             <form
                 onSubmit={handleSubmit(onSubmit)}
                 className="flex bg-[#FEFEFE] shadow-box max-w-[700px] mx-auto p-5 rounded-md items-center gap-4 justify-center flex-col w-full"
